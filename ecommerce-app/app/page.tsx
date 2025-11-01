@@ -7,7 +7,7 @@ import { Carousel } from "@/components/carousel";
 export default async function Home() {
   const products = await stripe.products.list({
     expand: ["data.default_price"],
-    limit: 5,
+    limit: 9,
   });
 
   return (
@@ -32,7 +32,7 @@ export default async function Home() {
           </div>
           <Image
             alt="Hero Image"
-            src={products.data[0].images[0]}
+            src={products.data[8].images[0]}
             className="rounded"
             width={450}
             height={450}
